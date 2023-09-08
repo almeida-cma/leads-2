@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Relatórios</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.8/xlsx.full.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th {
+            padding: 10px 50px;
+            background-color: #007BFF;
+            color: #fff;
+			font-size: 12px;
+        }
+
+        td {
+            padding: 10px 50px;
+            border-top: 1px solid #ddd;
+			font-size: 12px;
+        }
+
+        .modal-content {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin: 20px auto;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            max-width: 150px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+			color: #fff;
+        }
+    </style>
+	
+</head>
+
+<body>
+
+<h1>Relatórios de Leads</h1>
+
+<button id="goToAdmin">Administração</button>
+<br>
+<br>
+<button id="reportByGender">Por Gênero</button>
+<button id="reportByStatus">Por Situação</button>
+
+
+<table id="leadsReportTable" border="1">
+    <thead>
+        <tr>
+            <th>Categoria</th>
+            <th>Quantidade</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Os registros do relatório serão inseridos aqui via JavaScript -->
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>Total:</th>
+            <td id="totalValue">0</td>
+        </tr>
+    </tfoot>
+</table>
+<script src="./relatorios.js"></script>
+
+<br>
+<a href="/logout">Logout</a>
+
+</body>
+</html>
+
